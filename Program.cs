@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+using System;
+using System.Numerics;
 
 namespace Factorial
 {
@@ -7,7 +8,7 @@ namespace Factorial
         static void Main(string[] args)
         {
             Console.Write("Enter a number: ");
-            int num = int.Parse(Console.ReadLine());
+            int num = Convert.ToInt32(Console.ReadLine());
 
             BigInteger factorial = 1;
 
@@ -16,7 +17,7 @@ namespace Factorial
                 factorial *= i;
             }
 
-            Console.WriteLine("Factorial of " + num + " is: " + factorial);
+            Console.WriteLine($"Factorial of {num} is: {factorial}");
         }
     }
 }
